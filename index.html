@@ -1,8 +1,69 @@
 
-</html>
 <html>
 <head>
   <style>
+  body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+/* Styling the button to be circular and green (RGB: 25, 242, 114) */
+.go-to-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(25, 242, 114); /* Updated color */
+  color: white;
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-to-button:hover {
+  background-color: rgb(20, 200, 95); /* Slightly darker shade for hover */
+}
+
+/* Position the top button on the left bottom corner */
+.go-to-top {
+  left: 20px;
+  bottom: 20px;  /* Sit at the bottom of the screen */
+}
+
+/* Position the bottom button on the right bottom corner */
+.go-to-bottom {
+  right: 20px;
+  bottom: 20px;  /* Sit at the bottom of the screen */
+}
+
+
      body{
          text-align: center;
          background-image: linear-gradient(rgb(0, 197, 255), rgb(243, 243, 46));
@@ -13,11 +74,17 @@
 </head>
 
 <body>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="https://kids.britannica.com/kids/article/classical-music/353506#:~:text=Classical%20music%20developed%20in%20Europe,entertain%20audiences%20in%20royal%20courts.">Classical Info</a>
+  <a href="https://kids.britannica.com/kids/article/popular-music/353507">Pop Info</a>
+  <a href="https://kids.britannica.com/kids/article/rock-music/399982">Rock Info</a>
+</div>
 <h1>Music</h1>
 <h2>And everthing you need to know about it</h2>
 <p>Music has gone a long way since it was created all those years ago,<br> from Beethoven's First Symphony, to Ed Sheeran's Perfect and many more.<br> Music has also become more advanced through technology, such as electric guitars<br> and pianos, and drums, and...you get the point. Anyways, this is s website about music,<br> so I better tell you the basics of the anccient <em>"language"</em>. </p>
 
-<h2>The Basics</h2>
+<h3>The Basics</h3>
 
 <img src=https://www.allaboutmusictheory.com/wp-content/uploads/2014/10/TrebleClefSibelius.jpg width=500>
 <p>This is a <strong>Treble Clef</strong>. It is the most commonly used clef for instuments.<br> It has five lines and four spaces for notes to sit on. </p>
@@ -55,14 +122,42 @@
 
 <p>This is <strong>B major scale</strong>. It is played by using; B,C#,D#,E,F#,G#,A# and B.</p>
 
-</body>
+<h3>Bass Clef Notes</h3>
 
-</html>
-  
-</body>
+<p>Now I don't think anyone wants to look at all those notes<br> again, so I'll speed it up a bit. </p>
 
-</html>
-  
+<img src=data:image/png;base64,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>
+
+<p>See? Much faster.</p>
+
+<h2>
+
+</h2>
+
+<button class="go-to-button go-to-top" onclick="scrollToTop()">
+  <span>&uarr;</span>
+</button>
+
+<button class="go-to-button go-to-bottom" onclick="scrollToBottom()">
+  <span>&darr;</span>
+</button>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
 </body>
 
 </html>
